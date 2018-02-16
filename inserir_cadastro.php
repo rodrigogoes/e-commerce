@@ -13,7 +13,7 @@
 	$sql = "INSERT INTO cadastro (email, senha, cpf, nome, nascimento, sexo, telefone) VALUES ('$email', '$senha', '$cpf', '$nome', '$nascimento', '$sexo', '$telefone')"; //iremos adicionar as informações do formulario no banco de dados
 
 	if ($conn->query($sql) === TRUE) {
-		echo "Usuário Cadastrado com sucesso, vá fazer suas compras =)";
+		include "confirmacao_cadastro.php";
 		header('refresh: 3, index.php');
 	}
 

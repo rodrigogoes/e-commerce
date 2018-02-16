@@ -24,34 +24,33 @@ include "cabecalho.html";
                 </p>
                 <p> 
                     <label for="passwordsignup" class="youpasswd" data-icon="p">Digite Sua Senha </label></br>
-                    <input id="passwordsignup" name="senha" required="required" type="password" placeholder="Recomendamos misturar letras e números"/>
+                    <input name="senha" required="required" type="password" placeholder="Recomendamos misturar letras e números"/>
                 </p>
                 <p> 
                     <label for="emailsignup" class="grupo" data-icon="e" >Seu Sexo</label></br>
                      <select name="sexo" class="custom-select">
-                         <option value="sexom">
+                         <option value="masculino">
                              masculino
                          </option>
-                         <option value="sexof">
+                         <option value="feminino">
                          Feminino
                          </option>
                      </select>
                 </p>
                 <p> 
                     <label for="passwordsignup" class="uname" data-icon="p">Digite Seu CPF </label></br>
-                    <input id="passwordsignup" name="cpf" required="required" type="text" placeholder="00000000000"/>
+                    <input name="cpf" required="required" type="text" placeholder="00000000000"/>
                 </p>
                 <p> 
                     <label for="passwordsignup" class="uname" data-icon="p">Digite Sua Data de Nascimento </label></br>
-                    <input id="passwordsignup" name="nascimento" required="required" type="date" placeholder="EX.: 01/01/2000"/>
+                    <input name="nascimento" required="required" type="date" placeholder="EX.: 01/01/2000"/>
                 </p>
                 <p> 
                     <label for="passwordsignup" class="uname" data-icon="p">Digite Seu Telefone </label></br>
-                    <input id="passwordsignup" name="telefone" required="required" type="text" placeholder="EX.: (00)0000-0000"/>
+                    <input name="telefone" required="required" type="text" placeholder="EX.: (00)0000-0000"/>
                 </p>
                 <p>
-                <a style="text-decoration: none" href="inserir_cadastro.php"><button style="width: 96%" type="button" class="btn btn-success btn-lg btn-block">Fazer Meu Cadastro</button></a>
-
+                <button style="width: 96%" type="submit" class="btn btn-success btn-lg btn-block">Fazer Meu Cadastro</button>
             </form>
         </div>
         
