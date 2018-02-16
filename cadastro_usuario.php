@@ -27,6 +27,17 @@ include "cabecalho.html";
                     <input id="passwordsignup" name="senha" required="required" type="password" placeholder="Recomendamos misturar letras e números"/>
                 </p>
                 <p> 
+                    <label for="emailsignup" class="grupo" data-icon="e" >Seu Sexo</label></br>
+                     <select name="sexo" class="custom-select">
+                         <option value="sexom">
+                             masculino
+                         </option>
+                         <option value="sexof">
+                         Feminino
+                         </option>
+                     </select>
+                </p>
+                <p> 
                     <label for="passwordsignup" class="uname" data-icon="p">Digite Seu CPF </label></br>
                     <input id="passwordsignup" name="cpf" required="required" type="text" placeholder="00000000000"/>
                 </p>
@@ -38,8 +49,9 @@ include "cabecalho.html";
                     <label for="passwordsignup" class="uname" data-icon="p">Digite Seu Telefone </label></br>
                     <input id="passwordsignup" name="telefone" required="required" type="text" placeholder="EX.: (00)0000-0000"/>
                 </p>
-                <p>    
-                 <button style="width: 96%" href='inserir_cadastro.php'>Enviar</button>
+                <p>
+                <a style="text-decoration: none" href="inserir_cadastro.php"><button style="width: 96%" type="button" class="btn btn-success btn-lg btn-block">Fazer Meu Cadastro</button></a>
+
             </form>
         </div>
         
