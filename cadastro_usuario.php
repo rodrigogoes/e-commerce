@@ -39,7 +39,7 @@ include "cabecalho.html";
                 </p>
                 <p> 
                     <label for="passwordsignup" class="uname" data-icon="p">Digite Seu CPF </label></br>
-                    <input name="cpf" required="required" type="text" placeholder="00000000000"/>
+                    <input name="cpf" required="required" type="text" placeholder="000-000-000-00"/>
                 </p>
                 <p> 
                     <label for="passwordsignup" class="uname" data-icon="p">Digite Sua Data de Nascimento </label></br>
