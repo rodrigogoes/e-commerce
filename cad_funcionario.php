@@ -13,7 +13,7 @@ include "cabecalho.html";
 
         <div id="register" class="animate form">
             <form  action="inserir_cadastro.php" method="POST"> 
-                <h1> Faça seu Cadastro </h1> 
+                <h1> Cadastro do Funcionário </h1> 
                 <p> 
                     <label for="usernamesignup" class="uname" data-icon="u">Seu Nome</label></br>
                     <input id="usernamesignup" name="nome" required="required" type="text" placeholder="Juca da Silva" />
