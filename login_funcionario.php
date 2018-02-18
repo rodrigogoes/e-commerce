@@ -12,7 +12,7 @@ include "cabecalho.html";
     <div id="wrapper">
 
         <div id="register" class="animate form">
-            <form  action="select_login.php" method="POST"> 
+            <form  action="select_login_funcionario.php" method="POST"> 
                 <h1> Login do Funcionário </h1> 
                 <p> 
                     <label for="emailsignup" class="youmail" data-icon="e" >Seu E-Mail</label></br>
