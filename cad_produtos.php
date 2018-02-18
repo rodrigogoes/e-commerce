@@ -49,7 +49,7 @@ include "cabecalho.html";
                     <label for="foto" class="uname" data-icon="p">Foto do Produto </label></br>
                     <input name="foto" required="required" type="text" placeholder="Digite o endereço da imagem"/>
                 </p>
-                <button style="width: 96%" type="submit" class="btn btn-success btn-lg btn-block">Fazer Meu Cadastro</button>
+                <button style="width: 96%" type="submit" class="btn btn-success btn-lg btn-block">Cadastrar Produto</button>
             </form>
         </div>
         
