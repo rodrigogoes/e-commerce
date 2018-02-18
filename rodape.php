@@ -18,7 +18,7 @@
                 <ul>
                     <li><a style="text-decoration: none; color: #fff" href="cad_funcionario.php">Cadastro de Funcionário</a></li>
                     <li><a style="text-decoration: none; color: #fff" href="login_funcionario.php">Login de Funcionário</a></li>
-                    <li><a style="text-decoration: none; color: #fff" href="#!">Cadastro de Produtos</a></li>
+                    <li><a style="text-decoration: none; color: #fff" href="cad_produtos.php">Cadastro de Produtos</a></li>
                     <li><a style="text-decoration: none; color: #fff" href="#!">Excluir Produtos</a></li>
                 </ul>
             </div>
