@@ -4,7 +4,7 @@ include "cabecalho.html"
 
 <p><br></p>
     <div class="container">
-    <h1>Login realizado com sucesso, vá fazer suas compras =)</h1>
+    <h1>Login realizado com sucesso.</h1>
     </div>
 
 
