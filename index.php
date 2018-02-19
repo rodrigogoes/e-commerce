@@ -64,251 +64,73 @@ include "cabecalho.html"
 
 
 <div class="container">
-<section class="text-center pb-3">
+<section class="pb-3">
 
     <!--Section heading-->
-    <h1 class="font-bold h3 py-5">OS MAIS VENDIDOS</h1>
+    <h1 class="font-bold text-center h1 py-5">Confira nossos produtos em destaques</h1>
 
     <!--Grid row-->
     <div class="row">
 
         <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-r">
+    
 
             <!--Card-->
-            <div class="card card-cascade narrower" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-                <!--Card image-->
-                <div class="view overlay hm-white-slight">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/1.jpg" class="img-fluid" alt="">
-                    <a>
-                        <div class="mask"></div>
-                    </a>
-                </div>
-                <!--Card image-->
-
-                <!--Card content-->
-                <div class="card-body text-center">
-                    <!--Category & Title-->
-                    <a href="" class="grey-text">
-                    </a>
-                    <h4 class="card-title">
-                        <strong>
-                            <a href="">Denim trousers</a>
-                        </strong>
-                    </h4>
-
-                    <!--Description-->
-                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit..
-                    </p>
-
-                    <!--Card footer-->
-                    <div class="card-footer">
-                        <span class="left font-bold">
-                            <strong>49$</strong>
-                        </span>
-                        <span class="right">
-                            <a data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                <i class="fa fa-shopping-cart grey-text"></i>
-                            </a>
-                            <a data-toggle="tooltip" data-placement="top" title="Share">
-                                <i class="fa fa-share-alt grey-text"></i>
-                            </a>
-                            <a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist">
-                                <i class="fa fa-heart"></i>
-                            </a>
-                        </span>
-                    </div>
-
-                </div>
-                <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-r">
-
-            <!--Card-->
-            <div class="card card-cascade narrower" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-                <!--Card image-->
-                <div class="view overlay hm-white-slight">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/2.jpg" class="img-fluid" alt="">
-                    <a>
-                        <div class="mask"></div>
-                    </a>
-                </div>
-                <!--Card image-->
-
-                <!--Card content-->
-                <div class="card-body text-center">
-                    <!--Category & Title-->
-                    <a href="" class="grey-text">
-                    </a>
-                    <h4 class="card-title">
-                        <strong>
-                            <a href="">High heels</a>
-                        </strong>
-                    </h4>
-
-                    <!--Description-->
-                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit.
-                    </p>
-
-                    <!--Card footer-->
-                    <div class="card-footer">
-                        <span class="left font-bold">
-                            <strong>89$</strong>
-                        </span>
-                        <span class="right">
-                            <a data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                <i class="fa fa-shopping-cart grey-text"></i>
-                            </a>
-                            <a data-toggle="tooltip" data-placement="top" title="Share">
-                                <i class="fa fa-share-alt grey-text"></i>
-                            </a>
-                            <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                <i class="fa fa-heart grey-text"></i>
-                            </a>
-                        </span>
-                    </div>
-
-                </div>
-                <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-        </div>
-        <!--Grid column-->
-
-        <!--Grid column-->
-        <div class="col-lg-3 col-md-6 mb-r">
-
-            <!--Card-->
-            <div class="card card-cascade narrower" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-                <!--Card image-->
-                <div class="view overlay hm-white-slight">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/4.jpg" class="img-fluid" alt="">
-                    <a>
-                        <div class="mask"></div>
-                    </a>
-                </div>
-                <!--Card image-->
-
-                <!--Card content-->
-                <div class="card-body text-center">
-                    <!--Category & Title-->
-                    <a href="" class="grey-text">
-                    </a>
-                    <h4 class="card-title">
-                        <strong>
-                            <a href="">Brown coat</a>
-                        </strong>
-                    </h4>
-
-                    <!--Description-->
-                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit.
-                    </p>
-
-                    <!--Card footer-->
-                    <div class="card-footer">
-                        <span class="left font-bold">
-                            <strong>59$</strong>
-                        </span>
-                        <span class="right">
-                            <a data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                <i class="fa fa-shopping-cart grey-text"></i>
-                            </a>
-                            <a data-toggle="tooltip" data-placement="top" title="Share">
-                                <i class="fa fa-share-alt grey-text"></i>
-                            </a>
-                            <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
-                                <i class="fa fa-heart grey-text"></i>
-                            </a>
-                        </span>
-                    </div>
-
-                </div>
-                <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-        </div>
-        <!--Grid column-->
-
-        <!--Fourth column-->
-        <div class="col-lg-3 col-md-6 mb-r">
-
-            <!--Card-->
-            <div class="card card-cascade narrower" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-
-                <!--Card image-->
-                <div class="view overlay hm-white-slight">
-                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/3.jpg" class="img-fluid" alt="">
-                    <a>
-                        <div class="mask"></div>
-                    </a>
-                </div>
-                <!--Card image-->
-
-                <!--Card content-->
-                <div class="card-body text-center">
-                    <!--Category & Title-->
-                    <a href="" class="grey-text">
-                    </a>
-                    <h4 class="card-title">
-                        <strong>
-                            <a href="">Shirt</a>
-                        </strong>
-                    </h4>
-
-                    <!--Description-->
-                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit.
-                    </p>
-
-                    <!--Card footer-->
-                    <div class="card-footer">
-                        <span class="left font-bold">
-                            <strong>119$</strong>
-                        </span>
-                        <span class="right">
-                            <a data-toggle="tooltip" data-placement="top" title="Add to Cart">
-                                <i class="fa fa-shopping-cart grey-text"></i>
-                            </a>
-                            <a data-toggle="tooltip" data-placement="top" title="Share">
-                                <i class="fa fa-share-alt grey-text"></i>
-                            </a>
-                            <a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist">
-                                <i class="fa fa-heart"></i>
-                            </a>
-                        </span>
-                    </div>
-
-                </div>
-                <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-        </div>
-        <!--Fourth column column-->
-
-    </div>
-    <!--Grid row-->
-
-</section>
-<!--Section: Products v.1-->
-</div>
+            <div class="card card-cascade wider">
 
 
-</div>
+            <?php
+include "conexao.php";
+
+$sql = "SELECT * FROM produtos";
+$result = $conn -> query($sql);
+
+if ($result -> num_rows > 0) {
+    while($row = $result -> fetch_assoc())
+    {
+                echo "<div class='col-md-4'>";
+                echo ' <div class="view overlay hm-white-slight">';
+                echo "    <img class='container' width='50%' src='".$row['foto']."'>";
+                echo '  <a>';
+                echo '        <div class="mask"></div>';
+                echo '    </a>';
+                echo '</div>';
+
+               echo ' <div class="card-body text-center no-padding">';
+
+                echo '    <a href="" class="text-muted">';
+                echo '        <h5>'.$row['categoria'].'</h5>';
+                echo '    </a>';
+                echo '    <h4 class="card-title">';
+                echo '        <strong>';
+                 echo '           <a href="">'.$row['nome'].'</a>';
+                 echo '       </strong>';
+                echo '    </h4>';
+
+                echo '    <div class="card-footer">';
+                echo '        <span class="left font-bold">';
+                echo '            <strong>'.$row['preco'].'</strong>';
+                 echo '       </span>';
+                echo '    </div>';
+
+                echo '</div>';
+            echo '</div>';
+
+        echo '</div>';
+
+    echo '</div>';
+echo '</div>';
+echo '</section>';
+
+
+    }
+}
+else{
+    echo "0 resultados";
+}
+$conn -> close();
+
+?>
 
 </div>
 
