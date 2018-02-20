@@ -72,40 +72,37 @@ include "cabecalho.html"
     <!--Grid row-->
     <div class="row">
 
-        <!--Grid column-->
-    
 
-            <!--Card-->
-            <div class="card card-cascade wider">
+<?php
 
+    include "conexao.php";
 
-            <?php
-include "conexao.php";
-
-$sql = "SELECT * FROM produtos";
-$result = $conn -> query($sql);
+    $sql = "SELECT * FROM produtos order by id desc limit 3";
+    $result = $conn -> query($sql);
 
 if ($result -> num_rows > 0) {
     while($row = $result -> fetch_assoc())
     {
-                echo "<div class='col-md-4'>";
-                echo ' <div class="view overlay hm-white-slight">';
-                echo "    <img class='container' width='50%' src='".$row['foto']."'>";
-                echo '  <a>';
-                echo '        <div class="mask"></div>';
-                echo '    </a>';
+                
+    echo '<div class="col-lg-4 col-md-12 mb-r" style="margin-top: 25px;">';
+        echo '<div class="card card-cascade wider">';
+             echo "<div class='row'>";
+                echo '<div class="view overlay hm-white-slight">';
+                echo " <img class='container' width='' src='".$row['foto']."'>";
+                    echo '  <a>';
+                        echo '<div class="mask"></div>';
+                    echo '</a>';
                 echo '</div>';
 
-               echo ' <div class="card-body text-center no-padding">';
-
-                echo '    <a href="" class="text-muted">';
-                echo '        <h5>'.$row['categoria'].'</h5>';
-                echo '    </a>';
-                echo '    <h4 class="card-title">';
-                echo '        <strong>';
-                 echo '           <a href="">'.$row['nome'].'</a>';
-                 echo '       </strong>';
-                echo '    </h4>';
+            echo' <div class="card-body text-center no-padding">';
+               echo '    <a href="" class="text-muted">';
+               echo '        <h5>'.$row['categoria'].'</h5>';
+               echo '    </a>';
+               echo '    <h4 class="card-title">';
+               echo '        <strong>';
+               echo '           <a href="">'.$row['nome'].'</a>';
+               echo '       </strong>';
+               echo '    </h4>';
 
                 echo '    <div class="card-footer">';
                 echo '        <span class="left font-bold">';
@@ -113,24 +110,24 @@ if ($result -> num_rows > 0) {
                  echo '       </span>';
                 echo '    </div>';
 
-                echo '</div>';
-            echo '</div>';
-
+             echo '</div>';
+             echo '</div>';
         echo '</div>';
-
     echo '</div>';
-echo '</div>';
-echo '</section>';
-
-
-    }
+     }
 }
+
+
+   
 else{
     echo "0 resultados";
 }
 $conn -> close();
 
 ?>
+
+</div>
+</section>
 
 </div>
 
