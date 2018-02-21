@@ -106,7 +106,7 @@ if ($result -> num_rows > 0) {
 
                 echo '    <div class="card-footer">';
                 echo '        <span class="left font-bold">';
-                echo '            <strong>'.$row['preco'].'</strong>';
+                echo '            <strong>R$'.$row['preco'].'</strong>';
                  echo '       </span>';
                 echo '    </div>';
 

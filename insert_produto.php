@@ -10,7 +10,7 @@
 	$sql = "INSERT INTO produtos (nome, preco, categoria, foto) VALUES ('$nome', '$preco', '$categoria', '$foto')"; //iremos adicionar as informações do formulario no banco de dados
 
 	if ($conn->query($sql) === TRUE) {
-		include "confirmacao_cadastro.php";
+		echo "CADASTRADO COM SUCESSO";
 		header('refresh: 3, index.php');
 	}
 

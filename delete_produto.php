@@ -6,7 +6,7 @@
 $sql = "DELETE FROM produtos WHERE id='$id'";
 
 	if ($conn->query($sql) === TRUE) {
-		include "confirmacao_exclusao.php";
+		echo "PRODUTO DELETADO COM SUCESSO";
 		header('refresh: 3, index.php');
 	}
 

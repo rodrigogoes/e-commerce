@@ -25,23 +25,23 @@ include "cabecalho.html";
                 <p> 
                     <label for="categoria" class="grupo" data-icon="e" >Categoria do Produto</label></br>
                      <select name="categoria" class="custom-select">
-                         <option value="Livros">
-                            Livros
+                         <option value="livros">
+                            livros
                          </option>
-                         <option value="Celulares e Telefones">
-                            Celulares e Telefones
+                         <option value="celulares">
+                            celulares 
                          </option>
-                         <option value="Consoles e Games">
-                            Consoles e Games
+                         <option value="consoles">
+                            consoles
                          </option>
-                         <option value="Eletrodomésticos">
-                            Eletrodomésticos
+                         <option value="eletrodomesticos">
+                            eletrodomesticos
                          </option>
-                         <option value="Informática">
-                            Informática
+                         <option value="informatica">
+                            informatica
                          </option>
-                         <option value="Móveis e Decorações">
-                            Móveis e Decorações
+                         <option value="moveis">
+                            moveis
                          </option>
                      </select>
                 </p>
