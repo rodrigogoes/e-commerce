@@ -1,8 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title></title>
-</head>
+<?php
+include "cabecalho.html"
+?>
 <body>
 
 
@@ -10,7 +8,7 @@
 <section class="pb-3">
 
     <!--Section heading-->
-    <h1 class="font-bold text-center h1 py-5">Confira nossos produtos em destaques</h1>
+    <h1 class="font-bold text-center h1 py-5">Resultado da Pesquisa</h1>
 
     <!--Grid row-->
     <div class="row">
@@ -18,20 +16,20 @@
 <?php 
   include "conexao.php";
 
-  $busca = $_POST['cat'];
+  $busca = $_POST['categoria'];
 
-  $sql = "SELECT * FROM produtos WHERE UPPER (cat) = UPPER ('$busca')";
+  $sql = "SELECT * FROM produtos WHERE UPPER (categoria) = UPPER ('$busca')";
   $result = $conn -> query($sql);
 
   if ($result ->num_rows>0){
     while($row = $result -> fetch_assoc()){
 ?>
 
-    <div class="col-lg-4 col-md-12 mb-r" style="margin-top: 25px;">';
-    <div class="card card-cascade wider">;
-    <div class='row'>;
-    <div class="view overlay hm-white-slight">;
-    <img class='container' width='' src="imagens/<?php echo $row['foto']?>"
+    <div class="col-lg-4 col-md-12 mb-r" style="margin-top: 25px;">
+    <div class="card card-cascade wider">
+    <div class='row'>
+    <div class="view overlay hm-white-slight">
+    <img class='container' width='' src="<?php echo $row['foto']; ?>"
     <a>
      <div class="mask"></div>
     </a>
@@ -39,17 +37,17 @@
 
             <div class="card-body text-center no-padding">
                    <a href="" class="text-muted">
-                       <h5>'.$row['categoria'].'</h5>
+                       <h5><?php echo $row['categoria']; ?></h5>
                    </a>
                    <h4 class="card-title">
                        <strong>
-                          <a href="">'.$row['nome'].'</a>
+                          <a href=""><?php echo $row['nome']; ?></a>
                       </strong>
                    </h4>
 
                     <div class="card-footer">
                         <span class="left font-bold">
-                            <strong>R$'.$row['preco'].'</strong>
+                            <strong><?php echo $row['preco']; ?></strong>
                         </span>
                     </div>
 
@@ -62,11 +60,15 @@
   }
 }
 
+
+
 else{
     echo "0 resultados";
 }
 $conn -> close();
 ?>
+
+
 
 
 </div>

@@ -1,5 +1,6 @@
 <?php 
 	include "conexao.php";
+	include "cabecalho.html";
 
 	$email = $_POST['email'];
 	$senha = $_POST['senha'];
@@ -13,7 +14,7 @@
 	$sql = "INSERT INTO cad_funcionario (email, senha, cpf, nome, nascimento, sexo, telefone) VALUES ('$email', '$senha', '$cpf', '$nome', '$nascimento', '$sexo', '$telefone')"; //iremos adicionar as informações do formulario no banco de dados
 
 	if ($conn->query($sql) === TRUE) {
-		include "confirmacao_cadastro.php";
+		echo "<h1 style='text-align: center; margin-top: 15px;'>Funcionário Inserido com Sucesso</h1>";
 		header('refresh: 3, index.php');
 	}
 

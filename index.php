@@ -20,8 +20,6 @@ include "cabecalho.html"
                 <div class="mask"></div>
             </div>
             <div class="carousel-caption">
-                <h3 class="h3-responsive">Light mask</h3>
-                <p>First text</p>
             </div>
         </div>
         <div class="carousel-item">
@@ -31,8 +29,6 @@ include "cabecalho.html"
                 <div class="mask"></div>
             </div>
             <div class="carousel-caption">
-                <h3 class="h3-responsive">Strong mask</h3>
-                <p>Secondary text</p>
             </div>
         </div>
         <div class="carousel-item">
@@ -42,8 +38,6 @@ include "cabecalho.html"
                 <div class="mask"></div>
             </div>
             <div class="carousel-caption">
-                <h3 class="h3-responsive">Slight mask</h3>
-                <p>Third text</p>
             </div>
         </div>
     </div>
