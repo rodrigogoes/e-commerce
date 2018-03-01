@@ -71,13 +71,17 @@ include "cabecalho.html"
 
     include "conexao.php";
 
+
+
     $sql = "SELECT * FROM produtos order by id desc limit 3";
     $result = $conn -> query($sql);
 
 if ($result -> num_rows > 0) {
     while($row = $result -> fetch_assoc())
     {
-                
+
+
+               
     echo '<div class="col-lg-4 col-md-12 mb-r" style="margin-top: 25px;">';
         echo '<div class="card card-cascade wider">';
              echo "<div class='row'>";
@@ -101,8 +105,15 @@ if ($result -> num_rows > 0) {
                 echo '    <div class="card-footer">';
                 echo '        <span class="left font-bold">';
                 echo '            <strong>R$'.$row['preco'].'</strong>';
+             //   echo '<a action href="carrinho.php"><img width="25px" style="float: right;" src="imagens/carrinho.png"></a>';    
                  echo '       </span>';
                 echo '    </div>';
+
+                
+                ?>
+
+                <a href="carrinho.php?acao=add&id=<?php echo $row['id']?>&nome=<?php echo $row['nome']?>&preco=<?php echo $row['preco']?>&foto=<?php echo $row['foto']?>&categoria=<?php echo $row['categoria']?>" style="width: 96%; margin-top: 15px; margin-left: 7px;" type="submit" class="btn btn-success btn-md btn-block">Adicionar ao Carrinho</a>
+                <?php
 
              echo '</div>';
              echo '</div>';
