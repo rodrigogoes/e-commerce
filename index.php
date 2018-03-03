@@ -1,7 +1,19 @@
 <?php
+session_start();
 include "cabecalho.html"
 ?>
+<?php
 
+
+if ($_SESSION['logado'] == 1){
+    echo "Bem Vindo: ";
+    echo $_SESSION['email'] ;
+}
+else {
+    echo "voce não esta logado";
+    header('refresh: 3, login.php');
+}
+?>
 <div class="container">
   <br>
   <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
@@ -98,7 +110,8 @@ if ($result -> num_rows > 0) {
                echo '    </a>';
                echo '    <h4 class="card-title">';
                echo '        <strong>';
-               echo '           <a href="">'.$row['nome'].'</a>';
+               ?>           <a href="pedidos.php?acao=add&id=<?php echo $row['id']?>&nome=<?php echo $row['nome']?>&preco=<?php echo $row['preco']?>&foto=<?php echo $row['foto']?>&categoria=<?php echo $row['categoria']?>&descricao=<?php echo $row['descricao']?>"><?php echo $row['nome']?></a>
+               <?php
                echo '       </strong>';
                echo '    </h4>';
 

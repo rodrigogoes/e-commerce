@@ -21,7 +21,7 @@ else {
 <section class="pb-3">
 
     <!--Section heading-->
-    <h1 class="font-bold text-center h1 py-5">Seu Carrinho de Compras</h1>
+    <h1 class="font-bold text-center h1 py-5">Seu Pedido</h1>
 
     <!--Grid row-->
     <div class="row">
@@ -32,6 +32,7 @@ if (isset($_GET['nome'])) {
    $preco = $_GET['preco'];
    $foto = $_GET['foto'];
     $categoria = $_GET['categoria'];
+    $descricao = $_GET['descricao'];
 
   //  echo $_GET['nome'];
   //  echo $_GET['preco'];
@@ -66,13 +67,22 @@ if (isset($_GET['nome'])) {
                 echo '    </div>';
                 
   }  
-?>	
-	<a href="pedidos.php?acao=add&id=<?php echo $row['id']?>&nome=<?php echo $row['nome']?>&preco=<?php echo $row['preco']?>&foto=<?php echo $row['foto']?>&categoria=<?php echo $row['categoria']?>" style="width: 96%; margin-top: 15px; margin-left: 7px;" type="submit" class="btn btn-success btn-md btn-block">COMPRAR</a>
-
+?>
 
 </div>
 </section>
 
+</div>
+
+<div class="container">
+<table class="table table-hover table-success">
+  <thead>
+    <tr>
+      <th scope="col"><h5><?php echo $descricao?></h5></th>
+    </tr>
+  </thead>
+  
+</table>
 </div>
 
 <?php
