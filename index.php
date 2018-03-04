@@ -1,19 +1,7 @@
 <?php
-session_start();
 include "cabecalho.html"
 ?>
-<?php
 
-
-if ($_SESSION['logado'] == 1){
-    echo "Bem Vindo: ";
-    echo $_SESSION['email'] ;
-}
-else {
-    echo "voce não esta logado";
-    header('refresh: 3, login.php');
-}
-?>
 <div class="container">
   <br>
   <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">

@@ -1,5 +1,5 @@
 <!--Footer-->
-<footer class="page-footer blue center-on-small-only">
+<footer class="page-footer blue center-on-small-only clearfix">
 
     <!--Footer Links-->
     <div class="container-fluid" style="background-color: green; margin-top: 15px">

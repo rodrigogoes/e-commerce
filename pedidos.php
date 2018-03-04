@@ -6,7 +6,7 @@ session_start();
 
 <?php
 
-
+/*
 if ($_SESSION['logado'] == 1){
     echo "Bem Vindo: ";	
  	echo $_SESSION['email'] ;
@@ -15,13 +15,15 @@ else {
 	echo "voce não esta logado";
 	header('refresh: 3, login.php');
 }
+
+*/
 ?>
 
 <div class="container">
 <section class="pb-3">
 
     <!--Section heading-->
-    <h1 class="font-bold text-center h1 py-5">Seu Pedido</h1>
+    <h1 class="font-bold text-center h1 py-5"><?php echo $_GET['nome']; ?></h1>
 
     <!--Grid row-->
     <div class="row">
@@ -39,7 +41,7 @@ if (isset($_GET['nome'])) {
   //  echo $_GET['foto'];
   //  echo $_GET['categoria'];
 
-    echo '<div class="col-lg-4 col-md-12 mb-r" style="margin-top: 25px;">';
+    echo '<div class="col-lg-8 col-md-12 mb-r" style="margin-top: 15px;">';
         echo '<div class="card card-cascade wider">';
              echo "<div class='row'>";
                 echo '<div class="view overlay hm-white-slight">';
@@ -65,24 +67,28 @@ if (isset($_GET['nome'])) {
              //   echo '<a action href="carrinho.php"><img width="25px" style="float: right;" src="imagens/carrinho.png"></a>';    
                  echo '       </span>';
                 echo '    </div>';
+
+                ?>
+
+                <a href="carrinho.php?acao=add&id=<?php echo $row['id']?>&nome=<?php echo $row['nome']?>&preco=<?php echo $row['preco']?>&foto=<?php echo $row['foto']?>&categoria=<?php echo $row['categoria']?>" style="width: 96%; margin-top: 15px; margin-left: 7px;" type="submit" class="btn btn-success btn-md btn-block">Comprar Produto</a>
+                <?php
                 
   }  
 ?>
 
 </div>
-</section>
-
-</div>
 
 <div class="container">
-<table class="table table-hover table-success">
-  <thead>
-    <tr>
-      <th scope="col"><h5><?php echo $descricao?></h5></th>
-    </tr>
-  </thead>
-  
-</table>
+  <table class="table table-hover table-success">
+      <thead>
+          <tr>
+            <th scope="col"><h5><?php echo $descricao?></h5></th>
+          </tr>
+      </thead>  
+  </table>
+</div>
+
+</section>
 </div>
 
 <?php
