@@ -19,6 +19,10 @@ include "cabecalho.html";
                     <input id="usernamesignup" name="nome" required="required" type="text" placeholder="Ex.: PlayStation 4" />
                 </p>
                 <p> 
+                    <label for="descricao" class="usame" data-icon="e" >Descrição do Produto</label></br>
+                    <input id="descricao" name="descricao" required="required" type="text" placeholder="Insira a descrição do produto"/> 
+                </p>
+                <p> 
                     <label for="preco" class="usame" data-icon="e" >Preço do Produto</label></br>
                     <input id="preco" name="preco" required="required" type="text" placeholder=""/> 
                 </p>
