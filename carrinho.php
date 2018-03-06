@@ -67,12 +67,11 @@ if (isset($_GET['nome'])) {
                 
   }  
 ?>	
-	<a href="pedidos.php?acao=add&id=<?php echo $row['id']?>&nome=<?php echo $row['nome']?>&preco=<?php echo $row['preco']?>&foto=<?php echo $row['foto']?>&categoria=<?php echo $row['categoria']?>" style="width: 96%; margin-top: 15px; margin-left: 7px;" type="submit" class="btn btn-success btn-md btn-block">COMPRAR</a>
+	<a href="compra.php?acao=add&nome=<?php echo  $nome?>&preco=<?php echo $preco?>&foto=<?php echo $foto?>&categoria=<?php echo $categoria?>" style="width: 96%; margin-top: 15px; margin-left: 7px;" type="submit" class="btn btn-success btn-md btn-block">COMPRAR</a>
 
 
 </div>
 </section>
-
 </div>
 
 <?php

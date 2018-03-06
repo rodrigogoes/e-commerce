@@ -8,12 +8,12 @@ session_start();
 
 
 if ($_SESSION['logado'] == 1){
-    echo "Bem Vindo: ";	
- 	echo $_SESSION['email'] ;
+    echo "Bem Vindo: "; 
+  echo $_SESSION['email'] ;
 }
 else {
-	echo "voce não esta logado";
-	header('refresh: 3, login.php');
+  echo "voce não esta logado";
+  header('refresh: 3, login.php');
 }
 
 ?>
@@ -33,14 +33,15 @@ if (isset($_GET['nome'])) {
    $preco = $_GET['preco'];
    $foto = $_GET['foto'];
     $categoria = $_GET['categoria'];
-    $descricao = $_GET['descricao'];
+
+      $sql = "SELECT * FROM cadastro "; //
 
   //  echo $_GET['nome'];
   //  echo $_GET['preco'];
   //  echo $_GET['foto'];
   //  echo $_GET['categoria'];
 
-    echo '<div class="col-lg-8 col-md-12 mb-r" style="margin-top: 15px;">';
+    echo '<div class="col-lg-4 col-md-12 mb-r" style="margin-top: 15px;">';
         echo '<div class="card card-cascade wider">';
              echo "<div class='row'>";
                 echo '<div class="view overlay hm-white-slight">';
@@ -67,26 +68,54 @@ if (isset($_GET['nome'])) {
                  echo '       </span>';
                 echo '    </div>';
 
+
                 ?>
 
-           <a href="compra.php?acao=add&id=<?php echo $row['id']?>&nome=<?php echo $row['nome']?>&preco=<?php echo $row['preco']?>&foto=<?php echo $row['foto']?>&categoria=<?php echo $row['categoria']?>&descricao=<?php echo $row['descricao']?>" style="width: 96%; margin-top: 15px; margin-left: 7px;" type="submit" class="btn btn-success btn-md btn-block">Comprar Produto</a>
+           
                 <?php
-
+              
                 
   }  
 ?>
 
+<?php 
+
+  
+  include "conexao.php";
+
+   
+    $id = $_SESSION['id'];
+
+  $sql = "SELECT * FROM cadastro WHERE id = $id"; //
+
+$result = $conn -> query($sql);
+
+if ($result -> num_rows > 0) {
+  while($row = $result -> fetch_assoc())
+    {
+
+      
+
+     //aqui iremos pegar o nome e escrever após o login ser aceito
+    echo " <h4>DADOS DO COMPRADOR</h4>";
+    echo ' <h5>Senhor ' . $row['nome'].'</h5><br>'; //aqui iremos pegar o nome e escrever após o login ser aceito
+    echo ' <h5>portador do cpf: ' . $row['cpf'].'</h5><br>'; //aqui iremos pegar o nome e escrever após o login ser aceito
+    echo ' <h5>dono do numero telefonico ' . $row['telefone'].'</h5><br>'; //aqui iremos pegar o nome e escrever após o login ser aceito
+    echo ' <h5>nascido em :  ' . $row['nascimento'].'</h5>'; //aqui iremos pegar o nome e escrever após o login ser aceito
+}
+
+}
+else{
+  header('string');
+}
+
+
+ ?>
+
+<a href="compra.php?acao=add&id=<?php echo $row['id']?>&nome=<?php echo $row['nome']?>&preco=<?php echo $row['preco']?>&foto=<?php echo $row['foto']?>&categoria=<?php echo $row['categoria']?>" style="width: 96%; margin-top: 15px; margin-left: 7px;" type="submit" class="btn btn-success btn-md btn-block">CONFIRMAR COMPRA</a>
+
 </div>
 
-<div class="container">
-  <table class="table table-hover table-success">
-      <thead>
-          <tr>
-            <th scope="col"><h5><?php echo $descricao?></h5></th>
-          </tr>
-      </thead>  
-  </table>
-</div>
 
 </section>
 </div>

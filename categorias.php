@@ -42,7 +42,8 @@ if ($result -> num_rows > 0) {
                echo '  </a>';
                echo '  <h4 class="card-title">';
                echo '  <strong>';
-               echo '  <a href="">'.$row['nome'].'</a>';
+               ?>           <a href="pedidos.php?acao=add&id=<?php echo $row['id']?>&nome=<?php echo $row['nome']?>&preco=<?php echo $row['preco']?>&foto=<?php echo $row['foto']?>&categoria=<?php echo $row['categoria']?>&descricao=<?php echo $row['descricao']?>"><?php echo $row['nome']?></a>
+               <?php
                echo '  </strong>';
                echo '   </h4>';
 
@@ -74,8 +75,8 @@ $conn -> close();
 ?>
 
 </div>
-</section>
 
+</section>
 </div>
 
 <?php

@@ -9,7 +9,9 @@
 	$senha = $_POST['senha'];
 
 
-	$sql = "SELECT nome FROM cadastro WHERE email='$email' AND senha='$senha'"; //
+
+	$sql = "SELECT nome, id FROM cadastro WHERE email='$email' AND senha='$senha'"; //
+
 
 $result = $conn -> query($sql);
 
@@ -17,6 +19,7 @@ if ($result -> num_rows > 0) {
 	$_SESSION['logado'] = 1; //aqui iremos saber se a conta está logada
 	$_SESSION['email'] = $email;
 	while($row = $result -> fetch_assoc()){
+		$_SESSION['id'] = $row['id'] ;
 		echo "<h1 style='text-align: center; margin-top: 15px;'>Seja Bem Vindo</h1>";
 		header('refresh: 3, index.php');
 	}
