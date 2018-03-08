@@ -113,7 +113,7 @@ if ($result -> num_rows > 0) {
                 
                 ?>
 
-                <a href="carrinho.php?acao=add&id=<?php echo $row['id']?>&nome=<?php echo $row['nome']?>&preco=<?php echo $row['preco']?>&foto=<?php echo $row['foto']?>&categoria=<?php echo $row['categoria']?>" style="width: 96%; margin-top: 15px; margin-left: 7px;" type="submit" class="btn btn-success btn-md btn-block">Adicionar ao Carrinho</a>
+                <a href="carrinho.php?acao=add&id=<?php echo $row['id']?>&nome=<?php echo $row['nome']?>&preco=<?php echo $row['preco']?>&foto=<?php echo $row['foto']?>&categoria=<?php echo $row['categoria']?>&descricao=<?php echo $row['descricao']?>" style="width: 96%; margin-top: 15px; margin-left: 7px;" type="submit" class="btn btn-success btn-md btn-block">Adicionar ao Carrinho</a>
                 <?php
 
              echo '</div>';

@@ -14,7 +14,7 @@ if ($result -> num_rows > 0) {
 	while($row = $result -> fetch_assoc()){
 		
 		echo "<h1 style='text-align: center; margin-top: 15px;'>Login Realizado com Sucesso</h1>";
-		header('refresh: 3, index.php');
+		header('refresh: 3, pag_funcionario.php');
 	}
 }
 else{

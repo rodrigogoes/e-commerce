@@ -21,25 +21,33 @@ else {
 <section class="pb-3">
 
     <!--Section heading-->
-    <h1 class="font-bold text-center h1 py-5">Seu Carrinho de Compras</h1>
+    <h1 class="font-bold text-center h1 py-5">Compra Finalizada</h1>
 
     <!--Grid row-->
     <div class="row">
 
 <?php  
-if (isset($_GET['nome'])) {
-   $nome = $_GET['nome'];
-   $preco = $_GET['preco'];
-   $foto = $_GET['foto'];
-    $categoria = $_GET['categoria'];
-    $descricao = $_GET['descricao'];
+   $nome = $_POST['nomep'];
+   $categoria = $_POST['categoria'];
+   $preco = $_POST['preco'];
+   $foto = $_POST['foto'];
+   $nomec = $_POST['nomec'];
+   $cpf = $_POST['cpf'];
+   $tel = $_POST['tel'];
+   $nascimento = $_POST['nascimento'];
+   $pagamento = $_POST['pagamento'];
+   if ($pagamento == '12x') {
+      $preco = $preco * 1.1;
+    } 
+    
+ 
 
   //  echo $_GET['nome'];
   //  echo $_GET['preco'];
   //  echo $_GET['foto'];
   //  echo $_GET['categoria'];
 
-    echo '<div class="col-lg-4 col-md-12 mb-r" style="margin-top: 25px;">';
+    echo '<div class="col-lg-6 col-md-12 mb-r" style="margin-top: 25px;">';
         echo '<div class="card card-cascade wider">';
              echo "<div class='row'>";
                 echo '<div class="view overlay hm-white-slight">';
@@ -66,25 +74,23 @@ if (isset($_GET['nome'])) {
                  echo '       </span>';
                 echo '    </div>';
                 
-  }  
+ 
 ?>	
-	<a href="compra.php?acao=add&nome=<?php echo  $nome?>&preco=<?php echo $preco?>&foto=<?php echo $foto?>&categoria=<?php echo $categoria?>" style="width: 96%; margin-top: 15px; margin-left: 7px;" type="submit" class="btn btn-success btn-md btn-block">COMPRAR</a>
-
 
 </div>
-
-<div class="container">
-  <table class="table table-hover table-success">
-      <thead>
-          <tr>
-            <th scope="col"><h5><?php echo $descricao?></h5></th>
-          </tr>
-      </thead>  
-  </table>
-</div>
-
 </section>
 </div>
+
+
+<div class="container">
+   <ul class="list-group">
+     <li class="list-group-item">Nome: <?php echo $nomec ?></li>
+     <li class="list-group-item">CPF: <?php echo $cpf ?> </li>
+     <li class="list-group-item">Telefone: <?php echo $tel ?> </li>
+     <li class="list-group-item">Nascimento: <?php echo $nascimento ?> </li>
+     <li class="list-group-item">Pagamento: <?php echo $pagamento ?> </li>
+   </ul>
+ </div>
 
 <?php
 include "rodape.php";

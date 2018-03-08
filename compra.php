@@ -78,6 +78,30 @@ if (isset($_GET['nome'])) {
   }  
 ?>
 
+<?php
+
+if(isset($_POST['submit'])) {
+extract($_POST);
+
+if($parcelado==1) {
+echo "O valor de $campo sai a vista por $campo";
+} 
+
+else {
+echo "O valor de $campo parcelado sai em $parcelado vezes de ".$campo/$parcelado."";
+}
+
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
 <?php 
 
   
@@ -93,7 +117,40 @@ $result = $conn -> query($sql);
 if ($result -> num_rows > 0) {
   while($row = $result -> fetch_assoc())
     {
+?>
+<form action="confirmacao.php" method="post">
+                <p> 
+                   <h5><label for="emailsignup" style="color: #f00" class="grupo" data-icon="e" >Forma de Pagamento</label></br></h5>
+                     <select name="pagamento" class="custom-select">
+                         <option value="Á vista">
+                             À Vista
+                         </option>
+                         <option value="10x">
+                             Em até 10
+                             x sem Juros
+                         </option>
+                         <option value="12x">
+                         12x com Juros
+                         </option>
+                     </select>
+                </p>
+                <input type="hidden" name="nomec" value="<?php echo $row['nome'] ?> ">
+                <input type="hidden" name="cpf" value="<?php echo $row['cpf'] ?>">
+                <input type="hidden" name="tel" value=" <?php echo $row['telefone'] ?>">
+                <input type="hidden" name="nascimento" value=" <?php echo $row['nascimento'] ?>">
+                <input type="hidden" name="nomep" value=" <?php echo $nome ?>">
+                <input type="hidden" name="preco" value=" <?php echo $preco ?>">
+                <input type="hidden" name="foto" value=" <?php echo $foto ?>">
+                <input type="hidden" name="categoria" value=" <?php echo $categoria ?>">
 
+           <button type="submit" class="btn btn-success btn-md btn-block">Comprar</button>
+</form>
+
+</body>
+</html>
+
+
+<?php
       
 
      //aqui iremos pegar o nome e escrever após o login ser aceito
@@ -112,7 +169,7 @@ else{
 
  ?>
 
-<a href="compra.php?acao=add&id=<?php echo $row['id']?>&nome=<?php echo $row['nome']?>&preco=<?php echo $row['preco']?>&foto=<?php echo $row['foto']?>&categoria=<?php echo $row['categoria']?>" style="width: 96%; margin-top: 15px; margin-left: 7px;" type="submit" class="btn btn-success btn-md btn-block">CONFIRMAR COMPRA</a>
+
 
 </div>
 
