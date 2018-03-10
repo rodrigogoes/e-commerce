@@ -27,7 +27,11 @@ else {
     <div class="row">
 
 <?php  
-   $nome = $_POST['nomep'];
+
+
+  include "conexao.php";
+
+   $nomep = $_POST['nomep'];
    $categoria = $_POST['categoria'];
    $preco = $_POST['preco'];
    $foto = $_POST['foto'];
@@ -36,17 +40,19 @@ else {
    $tel = $_POST['tel'];
    $nascimento = $_POST['nascimento'];
    $pagamento = $_POST['pagamento'];
+
+
    if ($pagamento == '12x') {
       $preco = $preco * 1.1;
-    } 
-    
+    }
+
+$sql = "INSERT INTO pedido (nomep, preco, foto, nomec, cpf, tel, nascimento, pagamento) VALUES ('$nomep', '$preco', '$foto', '$nomec', '$cpf', '$tel', '$nascimento', '$pagamento')";
  
+   
+    if ($conn->query($sql) === TRUE) {
 
-  //  echo $_GET['nome'];
-  //  echo $_GET['preco'];
-  //  echo $_GET['foto'];
-  //  echo $_GET['categoria'];
 
+    }
     echo '<div class="col-lg-6 col-md-12 mb-r" style="margin-top: 25px;">';
         echo '<div class="card card-cascade wider">';
              echo "<div class='row'>";
@@ -63,7 +69,7 @@ else {
                echo '    </a>';
                echo '    <h4 class="card-title">';
                echo '        <strong>';
-               echo '           <a href="">'.$nome.'</a>';
+               echo '           <a href="">'.$nomep.'</a>';
                echo '       </strong>';
                echo '    </h4>';
 
@@ -81,6 +87,22 @@ else {
 </section>
 </div>
 
+<?php  
+
+
+  include "conexao.php";
+
+
+
+ $sql = "SELECT * FROM pedido WHERE cpf='$cpf'";
+    $result = $conn -> query($sql);
+
+if ($result -> num_rows > 0) {
+    while($row = $result -> fetch_assoc())
+    {
+
+
+?>
 
 <div class="container">
    <ul class="list-group">
@@ -89,10 +111,22 @@ else {
      <li class="list-group-item">Telefone: <?php echo $tel ?> </li>
      <li class="list-group-item">Nascimento: <?php echo $nascimento ?> </li>
      <li class="list-group-item">Pagamento: <?php echo $pagamento ?> </li>
+     <li class="list-group-item">Status do Pedido: <?php echo $row['status'] ?></li>
+
    </ul>
  </div>
 
 <?php
+  }
+}
+
+
+   
+else{
+    echo "0 resultados";
+}
+$conn -> close();
+
 include "rodape.php";
 ?>
 <!--/.Footer-->

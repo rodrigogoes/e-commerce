@@ -134,6 +134,7 @@ if ($result -> num_rows > 0) {
                          </option>
                      </select>
                 </p>
+                
                 <input type="hidden" name="nomec" value="<?php echo $row['nome'] ?> ">
                 <input type="hidden" name="cpf" value="<?php echo $row['cpf'] ?>">
                 <input type="hidden" name="tel" value=" <?php echo $row['telefone'] ?>">
@@ -142,6 +143,7 @@ if ($result -> num_rows > 0) {
                 <input type="hidden" name="preco" value=" <?php echo $preco ?>">
                 <input type="hidden" name="foto" value=" <?php echo $foto ?>">
                 <input type="hidden" name="categoria" value=" <?php echo $categoria ?>">
+                <input type="hidden" name="pedido" value=" <?php echo $pedido ?>">
 
            <button type="submit" class="btn btn-success btn-md btn-block">Comprar</button>
 </form>

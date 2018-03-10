@@ -11,6 +11,7 @@ include "cabecalho.html";
                     <a type="button" class="btn btn-success" style="text-decoration: none; color: #fff" href="cad_produtos.php">Cadastro de Produtos</a>
                     <a type="button" class="btn btn-success" style="text-decoration: none; color: #fff" href="update.php">Alterar dados do Produto</a>
                     <a type="button" class="btn btn-success" style="text-decoration: none; color: #fff" href="excluir_produto.php">Excluir Produtos</a>
+                    <a type="button" class="btn btn-success" style="text-decoration: none; color: #fff" href="alterar.php">Alterar Status do Pedido</a>
                 </ul>
 
 <?php
