@@ -87,6 +87,7 @@ $sql = "INSERT INTO pedido (nomep, preco, foto, nomec, cpf, tel, nascimento, pag
 </section>
 </div>
 
+
 <?php  
 
 
