@@ -95,7 +95,7 @@ $sql = "INSERT INTO pedido (nomep, preco, foto, nomec, cpf, tel, nascimento, pag
 
 
 
- $sql = "SELECT * FROM pedido WHERE cpf='$cpf'";
+ $sql = "SELECT * FROM pedido WHERE cpf='$cpf' limit 1";
     $result = $conn -> query($sql);
 
 if ($result -> num_rows > 0) {
